@@ -1,0 +1,280 @@
+/* IndicatorCards Component Styles */
+
+.indicators-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+.summary-card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-lg);
+  color: white;
+}
+
+.summary-card.primary .card-icon {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+}
+
+.summary-card.secondary .card-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.summary-card.tertiary .card-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.summary-card.quaternary .card-icon {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.card-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.card-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+/* Section Title */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title svg {
+  color: var(--primary-500);
+}
+
+/* Yearly Cards */
+.yearly-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.yearly-card {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.year-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--primary-100);
+  color: var(--primary-700);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  border-radius: var(--border-radius-full);
+  margin-bottom: var(--spacing-md);
+}
+
+.yearly-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Company Cards */
+.top-companies {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.company-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.company-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-100);
+  color: var(--primary-700);
+  font-weight: 700;
+  border-radius: var(--border-radius-full);
+}
+
+.company-card:first-child .company-rank {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--gray-900);
+}
+
+.company-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.company-emissions,
+.company-consumption {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.company-emissions svg {
+  color: var(--primary-500);
+}
+
+.company-consumption svg {
+  color: #f59e0b;
+}
+
+.company-bar {
+  width: 150px;
+  height: 8px;
+  background: var(--gray-100);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.company-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-400), var(--primary-600));
+  border-radius: var(--border-radius-full);
+  transition: width var(--transition-normal);
+}
+
+/* Sector Cards */
+.sector-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.sector-card {
+  padding: var(--spacing-xl);
+}
+
+.sector-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-700);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--primary-100);
+}
+
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.sector-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.sector-stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.sector-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .company-card {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .company-bar {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .company-stats {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
