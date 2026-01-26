@@ -8,8 +8,6 @@
 
 Aplicação web para análise e visualização de dados de emissões de carbono a partir de ficheiros Excel exportados pela DGEG (Direção-Geral de Energia e Geologia).
 
-![Screenshot da Aplicação](docs/screenshot.png)
-
 ## Funcionalidades
 
 - **Upload de ficheiros Excel** (.xlsx, .xls) com validação
